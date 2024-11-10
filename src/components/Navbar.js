@@ -25,26 +25,20 @@ const Navbar = () => {
         </ul>
 
         <ul className="nav-icons">
-          {socialLinks.map((social) => {
-            const { id, href, icon } = social
+          {socialLinks.map(({ id, href, icon }) => {
             return (
               <li key={id}>
-                <a href={href} target="_blank" className="nav-icon">
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="nav-icon"
+                >
                   <i className={icon}></i>
                 </a>
               </li>
             )
           })}
-          <li>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              className="nav-icon"
-            >
-              <i className="fab fa-facebook"></i>
-            </a>
-          </li>
-          <li></li>
         </ul>
       </div>
     </nav>
